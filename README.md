@@ -1,1 +1,1 @@
-# JS
+đây là tập hợp các kiến thức từ video youtube dạy về JS
