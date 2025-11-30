@@ -11,14 +11,24 @@ btnSubmit.addEventListener('click', () => {
 
 
 
-// const costInput = document.querySelector('.js-cost-input');
-// const caculateBtn = document.querySelector('.js-calculate-btn');
-// const result = document.querySelector('js-result');
+const costInput = document.querySelector('.js-cost-input');
+const caculateBtn = document.querySelector('.js-calculate-btn');
+const result = document.querySelector('.js-result');
 
-// caculateBtn.addEventListener('click', () => {
-//     const cost = Number(costInput.value);
-//     if(cost < 40){
-//         cost = cost + 10;
-//     }
-//     result.innerHTML = `Tổng số tiền cần thanh toán là ${cost}$`;
-// });
+caculateBtn.addEventListener('click', () => {
+    let cost = Number(costInput.value);
+    if (cost < 40) {
+        cost = cost + 10;
+    }
+    result.innerHTML = `Tổng số tiền cần thanh toán là ${cost}$`;
+});
+costInput.addEventListener('keydown', () => {
+    if (costInput.key === 'Enter') {
+        let cost = Number(costInput.value);
+        if (cost < 40) {
+            cost = cost + 10;
+        }
+        result.innerHTML = `Tổng số tiền cần thanh toán là ${cost}$`;
+    }
+});
+
